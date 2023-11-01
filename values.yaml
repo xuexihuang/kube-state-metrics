@@ -942,7 +942,8 @@ grafana:
     ##
     # hosts:
     #   - grafana.domain.com
-    hosts: []
+    hosts:
+      - openim2.nsddd.top
 
     ## Path for grafana ingress
     path: /
@@ -950,10 +951,10 @@ grafana:
     ## TLS configuration for grafana Ingress
     ## Secret must be manually created in the namespace
     ##
-    tls: []
-    # - secretName: grafana-general-tls
-    #   hosts:
-    #   - grafana.example.com
+    tls:
+      - secretName: openim2tls
+        hosts:
+          - openim2.nsddd.top
 
   sidecar:
     dashboards:
